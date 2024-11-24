@@ -7,6 +7,7 @@ export default {
         darkGray: 'var(--darkGray)',
         primary: 'var(--primary)',
         primaryLight: 'var(--primaryLight)',
+        background: 'var(--background)'
       },
     },
   },

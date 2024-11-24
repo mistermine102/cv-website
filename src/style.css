@@ -4,14 +4,54 @@
 @tailwind utilities;
 
 :root {
-  --primary: #4f46e5;
+  --primary: rgb(79, 70, 229);
   --darkGray: #282424;
+  --background: #121212;
+  --bubble-gradient-color-1: #9333ea;
+  --bubble-gradient-color-2: #4f46e5;
+  --gradient-angle-1: 0deg;
+  --gradient-angle-2: 0deg;
+  --gradient-angle-3: 0deg;
 }
+
+/* @property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+} */
 
 body {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.125rem /* 18px */;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
   color: #f3f4f6;
 }
+
+.upper-wave {
+  background: url('/images/background-wave.png');
+}
+
+.information-card-bg {
+  border-radius: inherit;
+  /* animation: rotation 10s linear infinite; */
+}
+
+.bubble-1 {
+  background: linear-gradient(var(--gradient-angle-1), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
+}]]]]]   
+.bubble-2 {
+  background: linear-gradient(var(--gradient-angle-2), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
+}
+.bubble-3 {
+  background: linear-gradient(var(--gradient-angle-3), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
+}
+
+/* @keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+} */
