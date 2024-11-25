@@ -8,9 +8,9 @@ import Home from './pages/Home.vue'
 <template>
   <div class="min-h-screen flex flex-col bg-background">
     <TheNavbar />
-    <div class="flex-1">
+    <main class="flex-1">
       <Home />
-    </div>
+    </main>
     <TheFooter />
   </div>
 </template>

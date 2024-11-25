@@ -5,7 +5,7 @@ import ProjectItem from '../ProjectItem.vue'
 
 <template>
   <section id="projects-section">
-    <BaseTitle>MOJE PROJEKTY</BaseTitle>
+    <BaseTitle id="projects-title">MOJE PROJEKTY</BaseTitle>
     <div class="flex flex-col gap-y-16">
       <ProjectItem
         title="APLIKACJA TAXI"

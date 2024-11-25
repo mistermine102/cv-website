@@ -1,9 +1,9 @@
 <script setup>
-import BaseTitle from "../base/BaseTitle.vue";
-import CourseItem from "../CourseItem.vue";
+import BaseTitle from '../base/BaseTitle.vue'
+import CourseItem from '../CourseItem.vue'
 </script>
 <template>
-  <section id="courses-section">
+  <div>
     <BaseTitle>KURSY</BaseTitle>
     <div class="grid 2xl:grid-cols-2 gap-8 justify-start 2xl:justify-center">
       <CourseItem
@@ -46,12 +46,11 @@ import CourseItem from "../CourseItem.vue";
         author="Stephen Grider"
         :hours="38"
         :links="{
-          course:
-            'https://www.udemy.com/course/the-complete-react-native-and-redux-course',
+          course: 'https://www.udemy.com/course/the-complete-react-native-and-redux-course',
           author: 'https://www.udemy.com/user/sgslo/',
         }"
       />
     </div>
     <p class="mt-4">+ wiele poradników, minikursów oraz artykułów</p>
-  </section>
+  </div>
 </template>

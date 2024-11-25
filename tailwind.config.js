@@ -10,7 +10,7 @@ export default {
         background: 'var(--background)',
       },
       spacing: {
-        page: '100px',
+        page: 'var(--pageMargin)',
       },
       fontSize: {
         regular: '1.25rem',

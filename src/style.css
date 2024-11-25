@@ -7,18 +7,30 @@
   --primary: rgb(79, 70, 229);
   --darkGray: #282424;
   --background: #121212;
+  --pageMargin: 250px;
+
+  /* breakpoints */
+  --screen2xl: 1536px;
+
+  /* used for bubbles in the background
   --bubble-gradient-color-1: #9333ea;
   --bubble-gradient-color-2: #4f46e5;
   --gradient-angle-1: 0deg;
   --gradient-angle-2: 0deg;
-  --gradient-angle-3: 0deg;
+  --gradient-angle-3: 0deg; */
 }
 
-/* @property --gradient-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-} */
+@media (max-width: 1536px) {
+  :root {
+    --pageMargin: 100px;
+  }
+}
+
+@media (max-width: 1536px) {
+  body {
+    font-size: 1.125rem;
+  }
+}
 
 body {
   font-family: 'Outfit', sans-serif;
@@ -26,12 +38,6 @@ body {
   line-height: 1.75rem;
   font-weight: 500;
   color: #f3f4f6;
-}
-
-@media (max-width: 1536px) { 
-  body {
-    font-size: 1.125rem;
-  }
 }
 
 .upper-wave {
@@ -52,12 +58,3 @@ body {
 .bubble-3 {
   background: linear-gradient(var(--gradient-angle-3), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
 }
-
-/* @keyframes rotation {
-  0% {
-    --gradient-angle: 0deg;
-  }
-  100% {
-    --gradient-angle: 360deg;
-  }
-} */
