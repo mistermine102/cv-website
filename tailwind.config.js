@@ -7,7 +7,13 @@ export default {
         darkGray: 'var(--darkGray)',
         primary: 'var(--primary)',
         primaryLight: 'var(--primaryLight)',
-        background: 'var(--background)'
+        background: 'var(--background)',
+      },
+      spacing: {
+        page: '100px',
+      },
+      fontSize: {
+        regular: '1.25rem',
       },
     },
   },

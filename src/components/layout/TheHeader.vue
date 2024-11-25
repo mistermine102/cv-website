@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-center pt-48 pb-16 z-10">
-    <img src="/images/SZYMON_JAROSZ_LIGHT.png" width="800px" alt="Szymon Jarosz CV">
+  <header class="flex justify-center pt-32 pb-16 z-10">
+    <img class="z-10" src="/images/SZYMON_JAROSZ_LIGHT.png" width="800px" alt="Szymon Jarosz CV">
   </header>
 </template>

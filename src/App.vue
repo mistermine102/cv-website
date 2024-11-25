@@ -8,7 +8,6 @@ import Home from './pages/Home.vue'
 <template>
   <div class="min-h-screen flex flex-col bg-background">
     <TheNavbar />
-    <TheHeader />
     <div class="flex-1">
       <Home />
     </div>

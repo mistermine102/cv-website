@@ -28,6 +28,12 @@ body {
   color: #f3f4f6;
 }
 
+@media (max-width: 1536px) { 
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 .upper-wave {
   background: url('/images/background-wave.png');
 }
@@ -39,7 +45,7 @@ body {
 
 .bubble-1 {
   background: linear-gradient(var(--gradient-angle-1), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
-}]]]]]   
+}
 .bubble-2 {
   background: linear-gradient(var(--gradient-angle-2), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
 }
