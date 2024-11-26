@@ -116,7 +116,7 @@ watch(isContainerVisible, () => {
       <div v-for="skill of skills.main" :key="skill.name" class="w-1/4 2xl:w-1/5">
         <div class="m-4 px-8 pt-8 pb-4 bg-white bg-opacity-5 rounded-lg">
           <img class="aspect-[2/1] object-contain" :src="skill.image.src" :alt="skill.name" />
-          <ProgressBar ref="progressBarsRefs" :doesAnimate="true" :cells="3" :progress="skill.level" />
+          <ProgressBar ref="progressBarsRefs" :doesAnimate="true" :cells="5" :progress="skill.level" />
         </div>
       </div>
     </div>

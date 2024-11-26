@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --primary: rgb(79, 70, 229);
+  --primary: #4f46e5;
   --darkGray: #282424;
   --background: #121212;
   --pageMargin: 250px;

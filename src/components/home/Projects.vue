@@ -4,7 +4,7 @@ import ProjectItem from '../ProjectItem.vue'
 </script>
 
 <template>
-  <section id="projects-section">
+  <section id="projects-section" class="mx-page mt-16">
     <BaseTitle id="projects-title">MOJE PROJEKTY</BaseTitle>
     <div class="flex flex-col gap-y-16">
       <ProjectItem
@@ -20,6 +20,7 @@ import ProjectItem from '../ProjectItem.vue'
           { name: 'NodeJS', icon: '/icons/nodejs.svg' },
           { name: 'MongoDB', icon: '/icons/mongodb.svg' },
         ]"
+        :model="{ src: '/models/iphone/scene.gltf' }"
       >
         <p>
           Moim ostatnim projektem jest aplikacja mobilna taxi stworzona przy użyciu <span class="text-primary">React Native</span> oraz
@@ -27,7 +28,6 @@ import ProjectItem from '../ProjectItem.vue'
         </p>
       </ProjectItem>
       <ProjectItem
-        reversed
         title="PLATFORMA BEATSTORE"
         :image="{ src: '/images/beatstore-mockup.png', alt: 'Platforma Beatstore' }"
         :features="[
@@ -40,6 +40,7 @@ import ProjectItem from '../ProjectItem.vue'
           { name: 'NodeJS', icon: '/icons/nodejs.svg' },
           { name: 'MongoDB', icon: '/icons/mongodb.svg' },
         ]"
+        :model="{ src: '/models/macbook/scene.gltf' }"
       >
         <p>
           Beatstore to platforma do dzielenia się swoją muzyką z innymi zaprogramowana w <span class="text-primary">Vue.js</span> oraz

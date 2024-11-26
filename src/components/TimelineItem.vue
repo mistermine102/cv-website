@@ -18,7 +18,7 @@ const props = defineProps({
         <span class="text-xl text-gray-300">{{ timeframe }}</span>
       </p>
       <p class="mt-4 pb-16">
-        {{ description }}
+        <slot></slot>
       </p>
     </div>
   </div>

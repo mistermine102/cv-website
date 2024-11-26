@@ -4,14 +4,14 @@ import AccountBoxIcon from 'vue-material-design-icons/AccountBox.vue'
 import DevicesIcon from 'vue-material-design-icons/Devices.vue'
 import ToolsIcon from 'vue-material-design-icons/Tools.vue'
 import BagSuitcaseIcon from 'vue-material-design-icons/BriefcaseClock.vue'
-
-const isNavTransparent = ref(true)
+import BaseButton from '../base/BaseButton.vue'
 
 const navLinks = [
   {
     name: 'O mnie',
     icon: AccountBoxIcon,
     section: {
+      id: 1,
       boundary: null,
       boundaryElementId: 'skills-title',
     },
@@ -20,6 +20,7 @@ const navLinks = [
     name: 'Umiejętności',
     icon: ToolsIcon,
     section: {
+      id: 2,
       boundary: null,
       boundaryElementId: 'experience-title',
     },
@@ -28,6 +29,7 @@ const navLinks = [
     name: 'Doświadczenie',
     icon: BagSuitcaseIcon,
     section: {
+      id: 3,
       boundary: null,
       boundaryElementId: 'projects-title',
     },
@@ -36,13 +38,12 @@ const navLinks = [
     name: 'Projekty',
     icon: DevicesIcon,
     section: {
+      id: 4,
       boundary: null,
       boundaryElementId: 'main-footer',
     },
   },
 ]
-
-const currentSectionIndex = ref(0)
 
 const calculateSectionBoundaries = () => {
   const screenTop = document.body.getBoundingClientRect().top
@@ -53,6 +54,8 @@ const calculateSectionBoundaries = () => {
     link.section.boundary = boundaryElement.getBoundingClientRect().bottom - screenTop
   }
 }
+
+const isNavTransparent = ref(true)
 
 const setNavbarTransparency = () => {
   const { scrollTop } = document.documentElement
@@ -65,6 +68,8 @@ const setNavbarTransparency = () => {
     isNavTransparent.value = false
   }
 }
+
+const currentSectionIndex = ref(0)
 
 const setCurrentSection = () => {
   calculateSectionBoundaries()
@@ -83,7 +88,18 @@ const setCurrentSection = () => {
   }
 }
 
+const scrollToSection = index => {
+  let boundary = 0
+
+  if (index !== 0) {
+    boundary = navLinks[index - 1].section.boundary
+  }
+
+  window.scrollTo({ top: boundary - 300, behavior: 'smooth' })
+}
+
 onMounted(() => {
+  calculateSectionBoundaries()
   document.addEventListener('scroll', setNavbarTransparency)
   document.addEventListener('scroll', setCurrentSection)
 })
@@ -100,6 +116,7 @@ onMounted(() => {
         :key="link.name"
         class="border-2 px-8 rounded-full py-1 border-primary flex items-center gap-x-2 hover:scale-105 transition-all"
         :class="[index === currentSectionIndex && 'bg-primary']"
+        @click="scrollToSection(index)"
       >
         <component :is="link.icon" />
         <span>{{ link.name }}</span>
