@@ -4,7 +4,9 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: dark;
   --primary: #4f46e5;
+  --primaryLight: #6a63f1;
   --darkGray: #282424;
   --background: #121212;
   --pageMargin: 250px;

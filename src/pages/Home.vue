@@ -7,8 +7,8 @@ import Skills from '../components/home/Skills.vue'
 <template>
   <div>
     <About />
-    <Skills />
-    <Experience />
     <Projects />
+    <Experience />
+    <Skills />
   </div>
 </template>

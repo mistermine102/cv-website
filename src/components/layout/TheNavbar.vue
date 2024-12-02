@@ -13,14 +13,14 @@ const navLinks = [
     section: {
       id: 1,
       boundary: null,
-      boundaryElementId: 'skills-title',
+      boundaryElementId: 'projects-title',
     },
   },
   {
-    name: 'Umiejętności',
-    icon: ToolsIcon,
+    name: 'Projekty',
+    icon: DevicesIcon,
     section: {
-      id: 2,
+      id: 4,
       boundary: null,
       boundaryElementId: 'experience-title',
     },
@@ -31,14 +31,14 @@ const navLinks = [
     section: {
       id: 3,
       boundary: null,
-      boundaryElementId: 'projects-title',
+      boundaryElementId: 'skills-title',
     },
   },
   {
-    name: 'Projekty',
-    icon: DevicesIcon,
+    name: 'Umiejętności',
+    icon: ToolsIcon,
     section: {
-      id: 4,
+      id: 2,
       boundary: null,
       boundaryElementId: 'main-footer',
     },
