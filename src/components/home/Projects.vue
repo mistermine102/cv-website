@@ -2,6 +2,7 @@
 import BaseTitle from '../base/BaseTitle.vue'
 import ProjectItem from '../ProjectItem.vue'
 import ModalTaxiDetails from '../modals/ModalTaxiDetails.vue'
+import ModalBeatstoreDetails from '../modals/ModalBeatstoreDetails.vue'
 </script>
 
 <template>
@@ -49,11 +50,8 @@ import ModalTaxiDetails from '../modals/ModalTaxiDetails.vue'
           { src: '/images/mockups/beatstore-mockup-2.png' },
           { src: '/images/mockups/beatstore-mockup-3.png' },
         ]"
-        :detailsModal="ModalTaxiDetails"
+        :detailsModal="ModalBeatstoreDetails"
       >
-        <!-- <template #detailsModal>
-          <ModalTaxiDetails />
-        </template> -->
         <template #description>
           <p>
             Beatstore to platforma do dzielenia się swoją muzyką z innymi zaprogramowana w <span class="text-primary">Vue.js</span> oraz
