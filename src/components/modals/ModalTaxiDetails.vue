@@ -17,7 +17,7 @@ defineExpose({
   <Modal ref="modalRef">
     <div class="w-full h-full p-4">
       <h2 class="text-4xl font-bold mb-4 text-primaryLight">Aplikacja Taxi</h2>
-      <p class="text-base mb-4">Aplikacja mobilna wykonana w React Native oraz Node.js służąca do zamawiania przejadów taxi.</p>
+      <p class="mb-16">Aplikacja mobilna wykonana w React Native oraz Node.js służąca do zamawiania przejadów taxi.</p>
       <h3 class="text-3xl font-bold mb-4">Użyte technologie i biblioteki</h3>
       <h4 class="text-2xl font-semibold mb-2">Klient</h4>
       <ul class="text-base list-disc ml-8 mb-2">
@@ -104,17 +104,17 @@ defineExpose({
         <span class="text-primaryLight font-semibold">Google Directions Api</span>.
       </p>
       <p class="text-base mb-2">
-        Zakres wyboru miejsca jest ograniczony do okręgu o promieniu <span class="text-primaryLight font-semibold">30km</span> . Odległość od punktu
-        który chce wybrać użytkownik a środkiem okręgu obliczana jest za pomocą wzoru <span class="text-primaryLight font-semibold">Haversine</span> .
-        Walidacja obejmuje miejsca podpowiadane przez Google Places Api (ustalony zakres o promieniu 30km) oraz odległość wybranego punktu od środka
-        okręgu (po stronie klienta oraz serwera).
+        Zakres wyboru miejsca jest ograniczony do okręgu o promieniu <span class="text-primaryLight font-semibold">30km</span>. Odległość od punktu
+        który chce wybrać użytkownik a środkiem okręgu obliczana jest za pomocą wzoru <span class="text-primaryLight font-semibold">Haversine</span>,
+        który bierze pod uwagę krzywiznę planety. Walidacja obejmuje miejsca podpowiadane przez Google Places Api (ustalony zakres o promieniu 30km)
+        oraz odległość wybranego punktu od środka okręgu (po stronie klienta oraz serwera).
       </p>
       <img src="/images/projects/taxi/zakres.png" class="h-[600px] rounded-lg m-auto mt-4 mb-8" alt="" />
       <p class="text-base mb-2">
         Następnie do przejazdu dobierany jest kierowca który jest obecnie dostępny oraz którego odległość do punktu startowego jest najmniejsza (z
         dostępnych kierowców).
       </p>
-      <p class="text-base">Na końcu wyświetlane jest podsumowanie przejazdu które zawiera:</p>
+      <p class="text-base">Na końcu wyświetlane jest <span class="text-primaryLight font-semibold">podsumowanie</span> przejazdu które zawiera:</p>
       <ul class="text-base list-disc ml-8 mb-2">
         <li>punkt startowy</li>
         <li>punkt końcowy</li>
@@ -157,11 +157,43 @@ defineExpose({
       <h4 class="text-2xl font-semibold mb-4">Funkcjonalności admina</h4>
       <p class="text-base mb-2">Admin ma możliwość wyświetlenia wszystkich aktywnych przejazdów i zobaczenia lokalizacji wszystkich kierowców.</p>
       <img src="/images/projects/taxi/admin_trasy.png" class="h-[600px] rounded-lg m-auto mt-4 mb-8" alt="" />
-      <p class="text-base mb-2">Może on również dodać nowy przejazd na podstawie numeru telefonu klienta.</p>
+      <p class="text-base mb-2">
+        Admin może również dodać nowy przejazd na podstawie <span class="text-primaryLight font-semibold">numeru telefonu klienta</span>, adresu
+        początkowego oraz adresu końcowego.
+      </p>
       <img src="/images/projects/taxi/admin_dodaj.png" class="h-[600px] rounded-lg m-auto mt-4 mb-8" alt="" />
       <h4 class="text-2xl font-semibold mb-4">Historia przejazdów</h4>
+      <p class="text-base mb-2">
+        Użytkownik ma możliwość wyświetlenia swojej <span class="text-primaryLight font-semibold">historii przejazdów</span>. Może zobaczyć datę
+        przejazdu, miejsce początkowe oraz docelowe jak i cenę przejazdu.
+      </p>
+      <img src="/images/projects/taxi/historia.png" class="h-[600px] rounded-lg m-auto mt-4 mb-8" alt="" />
       <h4 class="text-2xl font-semibold mb-4">Anulowanie przejazdu</h4>
+      <p class="text-base mb-2">
+        Aby anulować przejazd klient powinien kliknąć w 3 kropki obok statusu przejazdu a następnie w przycisk
+        <span class="text-primaryLight font-semibold">Anuluj przejazd</span>. Na ekranie wyświetli się komunikat aby zadzwonić do kierowcy w celu
+        anulowania przejazdu wraz z przyskiem <span class="text-primaryLight font-semibold">Zadzwoń</span> .
+      </p>
+      <img src="/images/projects/taxi/anuluj_klient.png" class="h-[600px] rounded-lg m-auto mt-4 mb-8" alt="" />
+      <p class="text-base mb-2">
+        Następnie kierowca może anulować przejazd klikając w 3 kropki oraz przycisk
+        <span class="text-primaryLight font-semibold">Anuluj przejazd</span>
+      </p>
+      <img src="/images/projects/taxi/anuluj_kierowca.png" class="h-[600px] rounded-lg m-auto mt-4 mb-8" alt="" />
       <h4 class="text-2xl font-semibold mb-4">Statusy przejazdu</h4>
+      <p class="text-base mb-4">
+        Zmiana statusu trasy następuję w klinięcie przez kierowcę przycisku z odpowiednią akcją np.
+        <span class="text-primaryLight font-semibold">dotarłem po klienta</span>. Informacja o zmianie statusu przesyłana jest przez websocket dzięki
+        czemu klient widzi zmianę w <span class="text-primaryLight font-semibold">czasie rzeczywistym</span>, bez odświeżania aplikacji.
+      </p>
+      <div class="flex flex-wrap gap-x-8 gap-y-4 pb-16">
+        <span class="text-base bg-[#fef08a] text-[#ca8a04] py-1 px-4 rounded-full">Oczekuje</span>
+        <span class="text-base bg-[#bfdbfe] text-[#0284c7] py-1 px-4 rounded-full">Przyjęta</span>
+        <span class="text-base bg-[#c7d2fe] text-[#4f46e5] py-1 px-4 rounded-full">Odebrano</span>
+        <span class="text-base bg-[#e9d5ff] text-[#9333ea] py-1 px-4 rounded-full">Dostarczono</span>
+        <span class="text-base bg-[#bbf7d0] text-[#16a34a] py-1 px-4 rounded-full">Zakończona</span>
+        <span class="text-base bg-[#fecaca] text-[#dc2626] py-1 px-4 rounded-full">Anulowana</span>
+      </div>
     </div>
   </Modal>
 </template>
