@@ -17,8 +17,8 @@ defineExpose({
 </script>
 <template>
   <Transition>
-    <div @click.once="toggle" v-if="isShown" class="bg-opacity-70 bg-black fixed inset-0 z-30 flex justify-center items-center px-[30%] py-8">
-      <div @click.stop class="w-full h-full flex flex-col bg-background rounded-lg overflow-y-auto">
+    <div @click.once="toggle" v-if="isShown" class="bg-opacity-70 bg-black fixed inset-0 z-30 flex justify-center items-center px-[30%]  py-8">
+      <div @click.stop class="max-w-full max-h-full flex flex-col bg-background rounded-lg overflow-y-auto">
         <div class="flex justify-end p-2">
           <button @click.once="toggle" class="">
             <CloseIcon :size="32" />

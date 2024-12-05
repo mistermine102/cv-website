@@ -110,7 +110,7 @@ watch(isContainerVisible, () => {
 </script>
 
 <template>
-  <section id="skills-section" class="mx-page">
+  <section id="skills-section" class="mx-page mt-16">
     <BaseTitle id="skills-title">UMIEJĘTNOŚCI</BaseTitle>
     <div ref="skillContainerRef" class="flex flex-wrap justify-center">
       <div v-for="skill of skills.main" :key="skill.name" class="w-1/4 2xl:w-1/5">

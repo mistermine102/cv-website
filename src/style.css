@@ -10,16 +10,6 @@
   --darkGray: #282424;
   --background: #121212;
   --pageMargin: 250px;
-
-  /* breakpoints */
-  --screen2xl: 1536px;
-
-  /* used for bubbles in the background
-  --bubble-gradient-color-1: #9333ea;
-  --bubble-gradient-color-2: #4f46e5;
-  --gradient-angle-1: 0deg;
-  --gradient-angle-2: 0deg;
-  --gradient-angle-3: 0deg; */
 }
 
 @media (max-width: 1536px) {
@@ -34,6 +24,18 @@
   }
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --pageMargin: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pageMargin: 10px;
+  }
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 1.25rem;
@@ -44,19 +46,4 @@ body {
 
 .upper-wave {
   background: url('/images/background-wave.png');
-}
-
-.information-card-bg {
-  border-radius: inherit;
-  /* animation: rotation 10s linear infinite; */
-}
-
-.bubble-1 {
-  background: linear-gradient(var(--gradient-angle-1), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
-}
-.bubble-2 {
-  background: linear-gradient(var(--gradient-angle-2), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
-}
-.bubble-3 {
-  background: linear-gradient(var(--gradient-angle-3), var(--bubble-gradient-color-1), var(--bubble-gradient-color-2));
 }
